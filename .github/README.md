@@ -6,4 +6,4 @@
 ₊✩‧ **[WEBSITE DRAFT](https://docs.google.com/document/d/1OT4paZaEdlHov-9nFjf-gQvY9-VSZUdah4Emd-Lmv6I/edit?usp=sharing)**  
 ---
 ### *₊✩‧ TAKEAWAYS ₊✩‧*
-to be followed gkanun
+"html and css is really fun when you understand how it works! would be much better if you don't cram it though :("
