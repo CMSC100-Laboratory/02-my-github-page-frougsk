@@ -1,0 +1,261 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url("bg.jpg"); 
+    background-position: center;
+    background-repeat: repeat;
+    background-size: auto;
+    overflow: hidden;
+    position: relative;
+}
+
+body::before {
+    background-image: url("bg2.png");
+    content: '';
+    position: absolute;
+    top: 40px;
+    right: 90px;
+    width: 90%;
+    height: 90%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.scene {
+    position: relative;
+    z-index: 1;
+}
+
+/* this is the center image*/
+.me {
+    position: relative;
+    height: 100vh;
+    width: auto;
+}
+
+.me img {
+    position: absolute;
+    height: 100%;
+    width: auto;
+    top: 0;
+    left: 50px;
+}
+
+.open {
+    animation: openEyes 5s infinite;
+}
+
+.blink {
+    animation: blinkEyes 5s infinite;
+}
+
+@keyframes openEyes {
+    0%, 92%, 100% { opacity: 1; }
+    94%, 96% { opacity: 1; }
+}
+
+@keyframes blinkEyes {
+    0%, 92%, 100% { opacity: 0; }
+    94%, 96% { opacity: 1; }
+}
+
+/* this is the disc rotatin*/
+.disc {
+    position: fixed;
+    top: -320px;
+    left: -320px;
+    width: 700px;
+    transform-origin: 50% 50%;
+    animation: spin 20s linear infinite;
+    filter: drop-shadow(4px 4px 8px rgba(0, 0, 0, 0.5));
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* this is my autobio*/
+.intro {
+    position: absolute;
+    top: -50px;
+    right: -170px;
+    width: 1000px;
+    z-index: 10;
+    transform: rotate(10deg);
+}
+
+.appl {
+    width: 100%;
+    height: auto;
+    filter: drop-shadow(4px 4px 8px rgba(0, 0, 0, 0.3));
+}
+
+.autobio {
+    position: absolute;
+    top: 32%; 
+    left: 55%;
+    transform: translateX(-50%);
+    width: 40%;
+    max-height: 45%;
+    padding: 10px 20px;
+    color: #2c2c2c;
+    font-family: "Outfit", sans-serif;
+    font-weight: bold;
+    overflow-y: auto;
+    text-align: center;
+}
+
+.autobio h2 {
+    margin: 0 0 10px 0;
+    font-size: 6rem;
+    color: #3D1F0F;
+    font-family: "Jersey 25", sans-serif;
+    line-height: 1;
+}
+
+.autobio p {
+    margin: 5px 0;
+    font-size: 1.6rem;
+    line-height: 1.5;
+}
+
+.autobio::-webkit-scrollbar {
+    width: 6px;
+}
+
+.autobio::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+}
+
+.autobio::-webkit-scrollbar-thumb {
+    background: #de5858;
+    border-radius: 3px;
+}
+
+.autobio::-webkit-scrollbar-thumb:hover {
+    background: rgb(199, 16, 16);
+}
+
+/* this is for projects */
+.switch-container {
+    position: absolute;
+    bottom: -50px;
+    right: -20px;
+    width: 900px;
+    z-index: 10;
+    transform: rotate(-3deg);
+}
+
+.switch {
+    width: 100%;
+    height: auto;
+    filter: drop-shadow(4px 4px 8px rgba(0, 0, 0, 0.4));
+}
+
+.switch-screen {
+    position: absolute;
+    top: 28%; 
+    left: 27%;
+    right: 27%;
+    bottom: 25%; 
+    background: white;
+    border-radius: 8px;
+    padding: 10px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.project-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.project-card {
+    border: 2px solid red;
+    border-radius: 8px;
+    padding: 20px 15px;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    min-height: 180px;
+}
+
+.project-card:hover {
+    background: rgba(255, 97, 97, 0.2);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(1, 57, 24, 0.225);
+}
+
+.project-card span {
+    margin: 10px 0 0 0;
+    display: block;
+    font-size: 3rem;
+    font-family: "Jersey 25", sans-serif;
+    font-weight: bolder;
+    color: #530606;
+}
+
+.project-card p{
+    margin: 5px 0;
+    font-size: 1.4rem;
+    line-height: 1;
+    color: #410404;
+    font-family: "Outfit", sans-serif;
+    text-align: center;
+}
+
+.switch-screen::-webkit-scrollbar {
+    width: 8px;
+}
+
+.switch-screen::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+}
+
+.switch-screen::-webkit-scrollbar-thumb {
+    background: #58de65;
+    border-radius: 3px;
+}
+
+.switch-screen::-webkit-scrollbar-thumb:hover {
+    background: rgb(52, 199, 16);
+}
+
+/* this is for socials */
+.socials {
+    position: absolute;
+    bottom: 20px;
+    left: 150px;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.socials a {
+    display: block;
+    line-height: 0;
+    margin: 0;
+    padding: 0;
+}
+
+
+.socials img {
+    width: 150px;
+    height: 150px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.socials img:hover {
+    transform: scale(1.3);
+}
+
